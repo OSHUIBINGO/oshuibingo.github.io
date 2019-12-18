@@ -94,12 +94,12 @@
 <meta property="og:site_name" content="水冰的技术博客">
 <meta property="og:description" content="​        接到公司的一些需求，其中有一个需求挺有意思的，实现一个验证码输入界面，想了一下，感觉还挺简单的，一组TextView和EditText就可以实现了，但是在实现过程中遇到了很多坑，特此记录。  界面效果​        实现的界面大概长成这样： ​         ​        分析：一个验证码输入框+确定按钮。要注意的是，当验证码没有输入完成的时候，确定按钮是灰色且不可点击；">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/resources/gif/VerifyCodeInputViewDemo.gif">
-<meta property="og:updated_time" content="2019-12-17T17:03:45.835Z">
+<meta property="og:image" content="http://yoursite.com/2019/12/15/Android-验证码输入框的实现/VerifyCodeInputViewDemo.gif">
+<meta property="og:updated_time" content="2019-12-18T02:16:58.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 验证码输入框的实现">
 <meta name="twitter:description" content="​        接到公司的一些需求，其中有一个需求挺有意思的，实现一个验证码输入界面，想了一下，感觉还挺简单的，一组TextView和EditText就可以实现了，但是在实现过程中遇到了很多坑，特此记录。  界面效果​        实现的界面大概长成这样： ​         ​        分析：一个验证码输入框+确定按钮。要注意的是，当验证码没有输入完成的时候，确定按钮是灰色且不可点击；">
-<meta name="twitter:image" content="http://yoursite.com/resources/gif/VerifyCodeInputViewDemo.gif">
+<meta name="twitter:image" content="http://yoursite.com/2019/12/15/Android-验证码输入框的实现/VerifyCodeInputViewDemo.gif">
 
 
 
@@ -393,7 +393,7 @@
         <p>​        接到公司的一些需求，其中有一个需求挺有意思的，实现一个验证码输入界面，想了一下，感觉还挺简单的，一组TextView和EditText就可以实现了，但是在实现过程中遇到了很多坑，特此记录。</p>
 <hr>
 <h1 id="界面效果"><a href="#界面效果" class="headerlink" title="界面效果"></a>界面效果</h1><p>​        实现的界面大概长成这样：</p>
-<p>​        <img src="/resources/gif/VerifyCodeInputViewDemo.gif" alt="VerifyCodeInputViewDemo"></p>
+<p>​        <img src="VerifyCodeInputViewDemo.gif" alt="VerifyCodeInputViewDemo"></p>
 <p>​        分析：一个验证码输入框+确定按钮。要注意的是，当验证码没有输入完成的时候，确定按钮是灰色且不可点击；当验证码输入完成后，改变背景颜色且可点击。</p>
 <hr>
 <h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><h2 id="第一步：自定义EditText控件"><a href="#第一步：自定义EditText控件" class="headerlink" title="第一步：自定义EditText控件"></a>第一步：自定义EditText控件</h2><p>​        继承重写EditText控件的onSelectionChanged()方法和onTouchEvent()方法。onSelectionChanged()方法是用来监听光标的移动事件，在这个方法里面需要设置光标始终在最后，防止用户控制光标左右移动；onTouchEvent()方法主要对点击事件的处理，我们在里面对双击的事件进行拦截，防止用户双击之后出现出现复制粘贴的选项。</p>
